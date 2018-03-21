@@ -22,11 +22,26 @@
   padding-top: 3vh;
   padding-bottom: 3vh;
   border-radius: 0;
+  background-color: #bd5851;
+  font-weight: 600;
+  font-size: 3vh;
+
 }
 
-.btn-outline-success {
-  border-bottom: 3px solid white;
-  background-color: #32525a;
+
+.btn-outline-success.focus, .btn-outline-success:focus {
+  box-shadow: none;
+
+}
+
+.btn.focus, .btn:focus{
+  outline: none;
+  box-shadow: none;
+
+}
+
+button:focus{
+  outline: none;
 }
 
 .form-control {
@@ -58,3 +73,7 @@
   border-bottom-left-radius: 0; */
   font-size: large;
 }
+
+
+
+

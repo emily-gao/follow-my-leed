@@ -12,7 +12,10 @@ const morgan      = require('morgan');
 const knexLogger  = require('knex-logger');
 const seeder = require('knex-csv-seeder');
 
-app.use(express.static('build'));
+// Express only serves static assets in production
+if (process.env.NODE_ENV === 'production') {
+  app.use(express.static('react-server/build'));
+}
 
 // Load the logger first so all (static) HTTP requests are logged to STDOUT
 // 'dev' = Concise output colored by response status for development use.
